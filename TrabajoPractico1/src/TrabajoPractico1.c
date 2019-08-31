@@ -10,9 +10,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "ProtOperaciones.h"
 
-#define PideX "Valor uno: "
+#define PideX "\nValor uno: "
 #define PideY "\nValor dos: "
+#define mensaje "\nEl resultado es: %d"
 
 int main(void)
 {
@@ -36,31 +38,40 @@ int main(void)
 	switch(opcion)
 	{
 		case 1: printf(PideX);
+				fflush(stdout);
 				scanf("%d",&x);
 				printf(PideY);
+				fflush(stdout);
 				scanf("%d",&y);
+				printf(mensaje,sumaValores(x,y));
+				fflush(stdout);
+				break;
 
 		case 2: printf(PideX);
 				scanf("%d",&x);
 				printf(PideY);
 				scanf("%d",&y);
+				break;
 
 		case 3: printf(PideX);
 				scanf("%d",&x);
 				printf(PideY);
 				scanf("%d",&y);
+				break;
 
 		case 4: printf(PideX);
 				scanf("%d",&x);
 				printf(PideY);
 				scanf("%d",&y);
+				break;
 
 		case 5: printf(PideX);
 				scanf("%d",&x);
 				printf(PideY);
 				scanf("%d",&y);
-
+				break;
 	}
+
 
 
 	return 0;

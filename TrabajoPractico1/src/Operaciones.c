@@ -8,27 +8,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int sumaValores(int valorX,int valorY,int resultado)
+int sumaValores(int valorX,int valorY)
+{
+	int resultado;
+	resultado = valorX + valorY;
+	return resultado;
+}
+
+int restaValores(int valorX,int valorY)
 {
 
 }
 
-int restaValores(int valorX,int valorY,int resultado);
+int multiplicaValores(int valorX,int valorY)
 {
 
 }
 
-int multiplicaValores(int valorX,int valorY,int resultado);
+int divideValores(int valorX,int valorY)
 {
 
 }
 
-int divideValores(int valorX,int valorY,int resultado);
-{
-
-}
-
-int factorial(int valorX,int valorY,int resultado);
+int factorial(int valorX,int valorY)
 {
 
 }
