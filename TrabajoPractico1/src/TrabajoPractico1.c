@@ -30,6 +30,7 @@ int main(void)
 	printf("\n4-Division");
 	printf("\n5-Factorial");
 	printf("\n\nIngrese su opcion aqui: ");
+	fflush(stdout);
 	scanf("%d",&opcion);
 
 	switch(opcion)
