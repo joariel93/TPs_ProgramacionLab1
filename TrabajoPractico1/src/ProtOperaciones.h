@@ -13,7 +13,8 @@ int sumaValores(int valorX,int valorY,int* presultado);
 int restaValores(int valorX,int valorY,int* presultado);
 int multiplicaValores(int valorX,int valorY,int* presultado);
 int divideValores(int valorX,int valorY,int* presultado);
-int factorial(int valorX,int valorY,int* presultado);
+int factorialX(int valorX,int* pfact);
+int factorialY(int valorY,int* pfact);
 
 
 #endif /* PROTOPERACIONES_H_ */

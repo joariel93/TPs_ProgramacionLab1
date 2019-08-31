@@ -33,7 +33,27 @@ int divideValores(int valorX,int valorY,int* presultado)
 	return *presultado;
 }
 
-int factorial(int valorX,int valorY,int* presultado)
+int factorialX(int valorX,int* pfact)
 {
-
+	int i;
+	*pfact = 1;
+	for(i=1;i<=valorX;i++)
+	{
+		*pfact = *pfact * i;
+	}
+	printf("\nEl factorial de %d es: %d",valorX,*pfact);
+	fflush(stdout);
+	return 0;
+}
+int factorialY(int valorY,int* pfact)
+{
+	int i;
+	*pfact = 1;
+	for(i=1;i<=valorY;i++)
+	{
+		*pfact = *pfact * i;
+	}
+	printf("\nEl factorial de %d es: %d",valorY,*pfact);
+	fflush(stdout);
+	return 0;
 }
