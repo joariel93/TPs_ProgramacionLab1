@@ -30,7 +30,7 @@ int main(void)
 	printf("\n4-Division");
 	printf("\n5-Factorial");
 	printf("\n\nIngrese su opcion aqui: ");
-	fflush(stdout);
+	fflush(stdout);//Se agrega este comando ya que en Windows no me funcionaba bien la consola
 	scanf("%d",&opcion);
 
 	switch(opcion)
@@ -39,10 +39,27 @@ int main(void)
 				scanf("%d",&x);
 				printf(PideY);
 				scanf("%d",&y);
+
 		case 2: printf(PideX);
 				scanf("%d",&x);
 				printf(PideY);
 				scanf("%d",&y);
+
+		case 3: printf(PideX);
+				scanf("%d",&x);
+				printf(PideY);
+				scanf("%d",&y);
+
+		case 4: printf(PideX);
+				scanf("%d",&x);
+				printf(PideY);
+				scanf("%d",&y);
+
+		case 5: printf(PideX);
+				scanf("%d",&x);
+				printf(PideY);
+				scanf("%d",&y);
+
 	}
 
 
