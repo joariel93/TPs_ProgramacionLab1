@@ -24,26 +24,21 @@ int main(void)
 	int i = 1;
 	int opcion;
 	int resultado = 0;
-	char user[20];
-	printf("Ingrese su nombre: ");
-	fflush(stdout);
-	scanf("%s",user);
-	if(user != NULL)
+
+	printf("****************************************************");
+	printf("\n***************BIENVENIDO*************************");
+	printf("\n***********CALCULADORA HECHA EN #C****************");
+	while(i==1)
 	{
-			printf("****************************************************");
-			printf("\n***************BIENVENIDO %s**********************",user);
-			printf("\n***********CALCULADORA HECHA EN #C****************");
-			while(i==1)
-			{
-					printf("\n\nEliga una opcion de Calculo...");
-					printf("\n\n1-Suma");
-					printf("\n2-Resta");
-					printf("\n3-Multiplicacion");
-					printf("\n4-Division");
-					printf("\n5-Factorial");
-					printf("\n\nIngrese su opcion aqui: ");
-					fflush(stdout);//Se agrega este comando ya que en Windows no me funcionaba bien la consola
-					scanf("%d",&opcion);
+			printf("\n\nEliga una opcion de Calculo...");
+			printf("\n\n1-Suma");
+			printf("\n2-Resta");
+			printf("\n3-Multiplicacion");
+			printf("\n4-Division");
+			printf("\n5-Factorial");
+			printf("\n\nIngrese su opcion aqui: ");
+			fflush(stdout);//Se agrega este comando ya que en Windows no me funcionaba bien la consola
+			scanf("%d",&opcion);
 
 					switch(opcion)
 					{
@@ -107,22 +102,21 @@ int main(void)
 								fflush(stdout);
 								break;
 					}
-					printf("\n\n***************************************");
-					printf("\n\nDesea realizar otro calculo?: ");
-					fflush(stdout);
-					printf("\n1-SI");
-					printf("\n0-NO");
-					printf("\nValor: ");
-					fflush(stdout);
-					scanf("%d",&i);
-					fflush(stdout);
+			printf("\n\n***************************************");
+			printf("\n\nDesea realizar otro calculo?: ");
+			fflush(stdout);
+			printf("\n1-SI");
+			printf("\n0-NO");
+			printf("\nValor: ");
+			fflush(stdout);
+			scanf("%d",&i);
+			fflush(stdout);
 			}
-			printf("\n\nFIN DEL PROGRAMA");
-			fflush(stdout);
-			printf("\n\nHasta la proxima %s !!",user);
-			fflush(stdout);
+	printf("\n\nFIN DEL PROGRAMA");
+	fflush(stdout);
 
-	}
+
+
 
 
 	return 0;
