@@ -12,10 +12,10 @@
 #include <stdlib.h>
 #include "ProtOperaciones.h"
 
-#define PideX "\nValor uno: "
-#define PideY "\nValor dos: "
+#define pideX "\nIngrese el Primer Operando: "
+#define pideY "\nIngrese el Segundo Operando: "
 #define mensaje "\nEl resultado es: %d"
-#define error_Division "\nNo se puede dividir por 0"
+#define error_Division -1
 
 int main(void)
 {
@@ -42,65 +42,60 @@ int main(void)
 
 					switch(opcion)
 					{
-						case 1: printf(PideX);
+						case 1: printf(pideX);
 								fflush(stdout);
 								scanf("%d",&x);
-								printf(PideY);
+								printf(pideY);
 								fflush(stdout);
 								scanf("%d",&y);
 								printf(mensaje,sumaValores(x,y,&resultado));
 								fflush(stdout);
 								break;
 
-						case 2: printf(PideX);
+						case 2: printf(pideX);
 								fflush(stdout);
 								scanf("%d",&x);
-								printf(PideY);
+								printf(pideY);
 								fflush(stdout);
 								scanf("%d",&y);
 								printf(mensaje,restaValores(x,y,&resultado));
 								fflush(stdout);
 								break;
 
-						case 3: printf(PideX);
+						case 3: printf(pideX);
 								fflush(stdout);
 								scanf("%d",&x);
-								printf(PideY);
+								printf(pideY);
 								fflush(stdout);
 								scanf("%d",&y);
 								printf(mensaje,multiplicaValores(x,y,&resultado));
 								fflush(stdout);
 								break;
 
-						case 4: printf(PideX);
+						case 4: printf(pideX);
 								fflush(stdout);
 								scanf("%d",&x);
-								printf(PideY);
+								printf(pideY);
 								fflush(stdout);
 								scanf("%d",&y);
-								if(y == 0)
+								if(divideValores(&x,&y,&resultado) != error_Division)
 								{
-									printf(error_Division);
-									fflush(stdout);
-									break;
+									printf(mensaje,resultado);
 								}
-								else
-								{
-									printf(mensaje,divideValores(x,y,&resultado));
-									fflush(stdout);
-									break;
-								}
+								break;
 
-						case 5: printf(PideX);
+						case 5: printf(pideX);
 								fflush(stdout);
 								scanf("%d",&x);
-								printf(PideY);
+								printf(pideY);
 								fflush(stdout);
 								scanf("%d",&y);
 								factorialX(x,&resultado);
 								factorialY(y,&resultado);
 								fflush(stdout);
 								break;
+
+
 					}
 			printf("\n\n***************************************");
 			printf("\n\nDesea realizar otro calculo?: ");

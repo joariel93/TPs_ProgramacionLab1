@@ -54,11 +54,26 @@ int multiplicaValores(int valorX,int valorY,int* presultado)
  *  \param Puntero a la variable "Resultado" de la funcion Main
  *  \return La Division de los Enteros
  */
-int divideValores(int valorX,int valorY,int* presultado)
+int divideValores(int *valorX,int *valorY,int *presultado)
 {
+	int retorno = -1;
+	int A,B;
 
-	*presultado = valorX/valorY;
-	return *presultado;
+	if (*valorY == 0)
+	{
+		printf("No se puede Dividir por 0!");
+		fflush(stdout);
+		retorno = -1;
+	}
+	else
+	{
+		A = *valorX;
+		B = *valorY;
+		*presultado = A/B;
+		retorno = *presultado ;
+	}
+
+	return retorno;
 }
 
 /**
