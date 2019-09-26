@@ -1,16 +1,15 @@
 /*
- * Empleado.c
+ * Employees.c
  *
  *  Created on: 26 sep. 2019
  *      Author: alumno
  */
 
-
-#include <string.h>
+//#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "Empleado.h"
 
+//#include "ArrayEmployees.h"
 
 
 /**\brief funcion para inicializar el campo isEmpty en 1
@@ -155,4 +154,3 @@ int addEmployees(Empleado array[], int tamaño, int* contadorID)
 
     return retorno;
 }
-

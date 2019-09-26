@@ -4,15 +4,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/Empleado.c \
+../src/Employees.c \
 ../src/TrabajoPractico_2.c 
 
 OBJS += \
-./src/Empleado.o \
+./src/Employees.o \
 ./src/TrabajoPractico_2.o 
 
 C_DEPS += \
-./src/Empleado.d \
+./src/Employees.d \
 ./src/TrabajoPractico_2.d 
 
 

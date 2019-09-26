@@ -1,38 +1,35 @@
 /*
- * Empleado.h
+ * ArrayEmployees.h
  *
  *  Created on: 26 sep. 2019
  *      Author: alumno
  */
 
-#ifndef HEADER_EMPLEADO_H_
-#define HEADER_EMPLEADO_H_
 
-#define tamañoText 30
+#ifndef ARRAYEMPLOYEES_H_
+#define ARRAYEMPLOYEES_H_
 
-//#define TEXT_SIZE 20
+//#define tamañoText 30
 
 
-typedef struct
+ typedef struct
 {
 	int id;
-	 char name[tamañoText];
-	 char lastName[tamañoText];
+	 char name[30];
+	 char lastName[30];
 	 float salary;
 	 int sector;
 	 int isEmpty;
 }Empleado;
 
 
-#endif /* HEADER_EMPLEADO_H_ */
-
 int initEmployees(Empleado array[], int tamaño);
 int buscaIsEmpty(Empleado array[], int tamaño, int* posicion);
 int buscaID(Empleado array[], int tamaño, int valorBuscado, int* posicion);
 int buscaInt(Empleado array[], int tamaño, int valorBuscado, int* posicion);
-int addEmployees(Empleado array[], int tamaño, int* contadorID);                          //cambiar fantasma
+int addEmployees(Empleado array[], int tamaño, int* contadorID);
 
-
+#endif /* ARRAYEMPLOYEES_H_ */
 
 
 

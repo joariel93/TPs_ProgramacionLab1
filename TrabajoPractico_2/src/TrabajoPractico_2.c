@@ -12,7 +12,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 //#include "utn.h"
-#include "Empleado.h"
+
+#include "ArrayEmployees.h"
 
 #define cantidad 3
 
@@ -40,34 +41,17 @@ int main(void)
 	            	addEmployees(arrayEmpleado,cantidad,&IDcontador);                   //cambiar
 	                break;
 
-	           /* case 2: //Modificar
-	                fantasma_modificar(arrayFantasma,QTY_TIPO);                   //cambiar
-	                break;
-
-	            case 3: //Baja
-	                fantasma_baja(arrayFantasma,QTY_TIPO);                   //cambiar
-	                break;
-
-	            case 4://Listar
-	                fantasma_listar(arrayFantasma,QTY_TIPO);                   //cambiar
-	                break;
-
-	            case 5://Ordenar
-	                fantasma_ordenarPorString(arrayFantasma,QTY_TIPO);                   //cambiar
-	                break;
-
-	            case 6://Salir
-	                break;*/
 	            default:
 	                printf("\nOpcion no valida");
 	        }
 	    }
 	    while(opcion!=6);
 	    return 0;
+
 	}
 
-	return 0;
-}
+
+
 
 
 
