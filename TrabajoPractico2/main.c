@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+
 
 #include <string.h>
 #include <stdio.h>
@@ -17,7 +16,7 @@ int main(void)
 	int IDcontador = 0;
 
 	Empleado arrayEmpleado[cantidad];
-	initEmployees(arrayEmpleado,cantidad);
+	//initEmployees(arrayEmpleado,cantidad);
 
 	do
 	    {
@@ -31,14 +30,14 @@ int main(void)
 	        switch(opcion)
 	        {
 	            case 1: //Alta
-	            	addEmployees(arrayEmpleado,cantidad,&IDcontador);                   //cambiar
+	            	//addEmployees(arrayEmpleado,cantidad,&IDcontador);                   //cambiar
 	                break;
 
 	            default:
 	                printf("\nOpcion no valida");
 	        }
-	    }
-	    while(opcion!=6);
+	    }while(opcion!=6);
+
 	    return 0;
 
 }

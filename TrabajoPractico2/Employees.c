@@ -7,18 +7,18 @@
 
 /**\brief funcion para inicializar el campo isEmpty en 1
 * \param array Empleado de la estructura
-* \param tamaño del array
+* \param size del array
 * \return int Return (-1) si existe error, return (0) si esta OK
 *
 */
-int initEmployees(Empleado array[], int tamaño)
+int initEmployees(Empleado array[], int size)
 {
     int retorno=-1;
-    if(array!= NULL && tamaño>0)
+    if(array!= NULL && size>0)
     {
-        for(;tamaño>0;tamaño--)
+        for(;size>0;size--)
         {
-            array[tamaño-1].isEmpty=1;
+            array[size-1].isEmpty=1;
         }
         retorno=0;
     }
@@ -27,18 +27,18 @@ int initEmployees(Empleado array[], int tamaño)
 
 /** \brief Busca el primer lugar vacio en un array
 * \param array empleado Array de la estructura empleado
-* \param  int Tamaño del array
+* \param  int size del array
 * \param posicion int* Puntero a la posicion del array donde se encuentra el valor buscado
 * \return  Return (-1) si no encuentra un lugar vacio o Error  si encuentra una posicion vacia
 *
 */
-int buscaIsEmpty(Empleado array[], int tamaño, int* posicion)
+int buscaIsEmpty(Empleado array[], int size, int* posicion)
 {
     int retorno=-1;
     int i;
-    if(array!= NULL && tamaño>=0 && posicion!=NULL)
+    if(array!= NULL && size>=0 && posicion!=NULL)
     {
-        for(i=0;i<tamaño;i++)
+        for(i=0;i<size;i++)
         {
             if(array[i].isEmpty==1)
             {
@@ -53,18 +53,18 @@ int buscaIsEmpty(Empleado array[], int tamaño, int* posicion)
 
 /** \brief Busca un ID en un array y devuelve la posicion en que se encuentra
 * \param array Empleado Array de Empleado
-* \param Tamaño del array
+* \param size del array
 * \param posicion int* Puntero a la posicion del array donde se encuentra el valor buscado
 * \return int Return (-1) si no encuentra el valor buscado o Error [Invalid length or NULL pointer] - (0) si encuentra el valor buscado
 *
 */
-int buscaID(Empleado array[], int tamaño, int valorBuscado, int* posicion)
+int buscaID(Empleado array[], int size, int valorBuscado, int* posicion)
 {
     int retorno=-1;
     int i;
-    if(array!= NULL && tamaño>=0)
+    if(array!= NULL && size>=0)
     {
-        for(i=0;i<tamaño;i++)
+        for(i=0;i<size;i++)
         {
             if(array[i].isEmpty==1)
                 continue;
@@ -81,18 +81,18 @@ int buscaID(Empleado array[], int tamaño, int valorBuscado, int* posicion)
 
 /** \brief Busca un int en un array y devuelve la posicion en que se encuentra
 * \param array fantasma Array de fantasma
-* \param size int Tamaño del array
+* \param size int size del array
 * \param posicion int* Puntero a la posicion del array donde se encuentra el valor buscado
 * \return int Return (-1) si no encuentra el valor buscado o Error [Invalid length or NULL pointer] - (0) si encuentra el valor buscado
 *
 */
-int buscaInt(Empleado array[], int tamaño, int valorBuscado, int* posicion)
+int buscaInt(Empleado array[], int size, int valorBuscado, int* posicion)
 {
     int retorno=-1;
     int i;
-    if(array!= NULL && tamaño>=0)
+    if(array!= NULL && size>=0)
     {
-        for(i=0;i<tamaño;i++)
+        for(i=0;i<size;i++)
         {
             if(array[i].isEmpty==1)
                 continue;
@@ -110,18 +110,18 @@ int buscaInt(Empleado array[], int tamaño, int valorBuscado, int* posicion)
 
 /** \brief Solicita los datos para completar la primer posicion vacia de un array
 * \param array fantasma Array de fantasma
-* \param size int Tamaño del array
+* \param size int size del array
 * \param contadorID int* Puntero al ID unico que se va a asignar al nuevo elemento
 * \return int Return (-1) si Error [largo no valido o NULL pointer o no hay posiciones vacias] - (0) si se agrega un nuevo elemento exitosamente
 *
 */
-int addEmployees(Empleado array[], int tamaño, int* contadorID)
+int addEmployees(Empleado array[], int size, int* contadorID)
 {
     int retorno=-1;
     int posicion;
-    if(array!=NULL && tamaño>0 && contadorID!=NULL)
+    if(array!=NULL && size>0 && contadorID!=NULL)
     {
-        if(buscaIsEmpty(array,tamaño,&posicion)==-1)
+        if(buscaIsEmpty(array,size,&posicion)==-1)
         {
             printf("\nNo hay lugares vacios");
         }

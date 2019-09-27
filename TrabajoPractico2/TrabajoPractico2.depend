@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1569543424 source:/home/alumno/Descargas/TomasCostilla/TPs_ProgramacionLab1/TrabajoPractico2/main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h"
+
+1569542647 /home/alumno/Descargas/TomasCostilla/TPs_ProgramacionLab1/TrabajoPractico2/ArrayEmployees.h
+
