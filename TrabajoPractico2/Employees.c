@@ -40,7 +40,7 @@ int buscaIsEmpty(Empleado array[], int size, int* posicion)
     {
         for(i=0;i<size;i++)
         {
-            if(array[i].isEmpty==1)
+            if(array[i].isEmpty==0)
             {
                 retorno=0;
                 *posicion=i;
