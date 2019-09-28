@@ -7,3 +7,27 @@
 
 1569544281 /home/alumno/Descargas/TomasCostilla/TPs_ProgramacionLab1/TrabajoPractico2/ArrayEmployees.h
 
+1569685089 source:d:\proyectos - utn\trabajos practicos - utn\tps_programacionlab1\trabajopractico2\main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"ArrayEmployees.h"
+
+1569684987 d:\proyectos - utn\trabajos practicos - utn\tps_programacionlab1\trabajopractico2\arrayemployees.h
+
+1569683210 d:\proyectos - utn\trabajos practicos - utn\tps_programacionlab1\trabajopractico2\utn.h
+
+1569684929 source:d:\proyectos - utn\trabajos practicos - utn\tps_programacionlab1\trabajopractico2\arrayemployees.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"ArrayEmployees.h"
+
+1569679598 source:d:\proyectos - utn\trabajos practicos - utn\tps_programacionlab1\trabajopractico2\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+

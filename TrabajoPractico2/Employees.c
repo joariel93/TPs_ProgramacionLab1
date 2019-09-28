@@ -1,7 +1,6 @@
-//#include <string.h>
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "ArrayEmployees.h"
 
 
