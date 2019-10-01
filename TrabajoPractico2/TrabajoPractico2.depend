@@ -31,7 +31,7 @@
 	<string.h>
 	"utn.h"
 
-1569968921 source:c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\arrayemployees.c
+1569973104 source:c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\arrayemployees.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -40,5 +40,18 @@
 
 1569968999 c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\utn.h
 
-1569968662 c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\arrayemployees.h
+1569973084 c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\arrayemployees.h
+
+1569973116 source:c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"ArrayEmployees.h"
+
+1569969050 source:c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
 

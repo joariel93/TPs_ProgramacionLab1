@@ -15,10 +15,10 @@
 #endif // ARRAYEMPLOYEES_H_INCLUDED
 int initEmployees(Empleado array[], int size);
 int buscaIsEmpty(Empleado array[], int size, int* posicion);
-int buscaID(Empleado array[], int size, int valorBuscado, int* posicion);
-int buscaInt(Empleado array[], int size, int valorBuscado, int* posicion);
+int findEmployeeById(Empleado array[], int size, int valorBuscado, int* posicion);
 int addEmployees(Empleado array[], int size, int* contadorID);
 int removeEmployee(Empleado array[], int size);
 int updateEmployee(Empleado array[], int size);
 int sortEmployees(Empleado array[],int size);
 int printEmployees(Empleado array[], int size);
+int verificaVacio(Empleado array[],int size);
