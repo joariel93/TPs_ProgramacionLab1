@@ -1,4 +1,3 @@
-
 int getString(char* msg, char* msgError, int min, int max, int* reintentos, char* resultado);
 
 int utn_getName(char* msg,char* msgError,int min,int max,int reintentos,char* resultado);
@@ -33,7 +32,3 @@ int isValidAlphanumeric(char* stringRecibido);
 
 int utn_getChar(char* msg, char* msgError, int min, int max, int reintentos, char* resultado);
 int isValidChar(char charRecibido);
-
-
-
-
