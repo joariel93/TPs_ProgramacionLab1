@@ -243,7 +243,6 @@ int updateEmployee(Empleado array[], int size)
             {
                 printf("\n Posicion: %d\n ID: %d\n 1 - Nombre: %s\n 2 - Apellido: %s\n 3 - Salario: %f\n 4 - Sector: %d \n 5 - Salir",
                        posicion, array[posicion].id,array[posicion].name,array[posicion].lastName,array[posicion].salary,array[posicion].sector);
-                //utn_getChar("\n\nElija el campo modificar: ","\nError valor ingresado",'A','Z',1,&opcion);
                 printf("\n\nElija la opcion a modificar: ");
                 scanf("%d",&opcion);
                 switch(opcion)
@@ -272,12 +271,19 @@ int updateEmployee(Empleado array[], int size)
     return retorno;
 }
 
-
-
+//Ordenar
+/** \brief Lista los empleados
+* \param array Empleado
+* \param Tamaño del array
+* \return int Return (-1) si Error [largo no valido o NULL pointer] - (0) se lista exitosamente
+*
+*/
 int printEmployees(Empleado array[], int size)
 {
     int retorno=-1;
     int i;
+    int j;
+    int contar = 0;
     float sumaProm = 0;
     float total;
     if(array!=NULL && size>0)
@@ -288,6 +294,15 @@ int printEmployees(Empleado array[], int size)
             sumaProm += array[i].salary;
         }
         total=sumaProm/size;
+
+        for(j=0;j<size;j++)
+        {
+            if(array[j].salary>total)
+            {
+                contar = contar + 1;
+            }
+        }
+        printf("\n\nLa cantidad de empleados que superan el promedio es de: %d",contar);
         printf("\n\nLa suma de los salarios es de: %f",sumaProm);
         printf("\n\nEl promedio de los salarios es de: %f",total);
         retorno=0;
@@ -302,9 +317,9 @@ int submenu(char* msg1,char* msg2)
 }
 
 //Ordenar
-/** \brief Ordena por campo XXXXX los elementos de un array
-* \param array fantasma Array de fantasma
-* \param size int Tamaño del array
+/** \brief Ordena por apellido los elementos de un array
+* \param array Empleado
+* \param Tamaño del array
 * \return int Return (-1) si Error [largo no valido o NULL pointer] - (0) si se ordena exitosamente
 *
 */
