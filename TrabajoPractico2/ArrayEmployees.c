@@ -246,12 +246,22 @@ int printEmployees(Empleado array[], int size)
     int contar = 0;
     float sumaProm = 0;
     float total;
+    printf("\nID   Nombre     Apellido     Salario     Sector");
     if(array!=NULL && size>0)
-    {   printf("\nID   Nombre   Apellido   Salario   Sector");
+    {
         for(i=0;i<size;i++)
         {
-            printf("\n%d   %s   %s   %f   %d",array[i].id,array[i].name,array[i].lastName,array[i].salary,array[i].sector);
-            sumaProm += array[i].salary;
+            if(array[i].isEmpty == 1)
+            {
+                continue;
+            }
+            else //if(array[j].salary>total)
+            {
+                printf("\n %d    %s     %s      %f      %d",array[i].id,array[i].name,array[i].lastName,array[i].salary,array[i].sector);
+                sumaProm += array[i].salary;
+            }
+
+
         }
         total=sumaProm/size;
 
@@ -306,27 +316,30 @@ int sortEmployees(Empleado array[],int size)
 			if(strcmp(array[i].lastName,array[i+1].lastName)>0)
 			{
 
-				auxint = array[i].id;
-				array[i].id = array[i+1].id;
-				array[i+1].id = auxint;
+                    auxint = array[i].id;
+                    array[i].id = array[i+1].id;
+                    array[i+1].id = auxint;
 
-				auxfloat = array[i].salary;
-				array[i].salary = array[i+1].salary;
-				array[i+1].salary = auxfloat;
+                    auxfloat = array[i].salary;
+                    array[i].salary = array[i+1].salary;
+                    array[i+1].salary = auxfloat;
 
-				auxsect = array[i].sector;
-				array[i].sector = array[i+1].sector;
-				array[i+1].sector = auxsect;
+                    auxsect = array[i].sector;
+                    array[i].sector = array[i+1].sector;
+                    array[i+1].sector = auxsect;
 
-				strcpy(auxiliarApellidoStr,array[i].lastName);
-				strcpy(array[i].lastName,array[i+1].lastName);
-				strcpy(array[i+1].lastName,auxiliarApellidoStr);
+                    strcpy(auxiliarApellidoStr,array[i].lastName);
+                    strcpy(array[i].lastName,array[i+1].lastName);
+                    strcpy(array[i+1].lastName,auxiliarApellidoStr);
 
-				strcpy(auxNombre,array[i].name);
-				strcpy(array[i].name,array[i+1].name);
-				strcpy(array[i+1].name,auxNombre);
+                    strcpy(auxNombre,array[i].name);
+                    strcpy(array[i].name,array[i+1].name);
+                    strcpy(array[i+1].name,auxNombre);
 
-				flagDesordenado = -1;
+                    flagDesordenado = -1;
+
+
+
 			}
 		}
 		//return 0;

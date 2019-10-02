@@ -14,7 +14,8 @@ int main(void)
 
 	Empleado arrayEmpleado[cantidad];
 	initEmployees(arrayEmpleado,cantidad);
-	printf("ABM DE EMPLEADOS");
+	printf("****BIENVENIDO AL SISTEMA*****");
+	printf("\n\n****** ABM DE EMPLEADOS *****");
 	do
 	    {
 	        printf("\n\n1- ALTA ");

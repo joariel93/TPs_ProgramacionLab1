@@ -21,4 +21,3 @@ int removeEmployee(Empleado array[], int size);
 int updateEmployee(Empleado array[], int size);
 int sortEmployees(Empleado array[],int size);
 int printEmployees(Empleado array[], int size);
-int verificaVacio(Empleado array[],int size);

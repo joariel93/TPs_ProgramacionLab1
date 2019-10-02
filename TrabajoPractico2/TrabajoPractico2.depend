@@ -55,3 +55,27 @@
 	<string.h>
 	"utn.h"
 
+1570054497 source:/home/alumno/Descargas/TomasCostilla/TomasCostilla/TPs_ProgramacionLab1/TrabajoPractico2/ArrayEmployees.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"ArrayEmployees.h"
+
+1570053277 /home/alumno/Descargas/TomasCostilla/TomasCostilla/TPs_ProgramacionLab1/TrabajoPractico2/utn.h
+
+1570053999 /home/alumno/Descargas/TomasCostilla/TomasCostilla/TPs_ProgramacionLab1/TrabajoPractico2/ArrayEmployees.h
+
+1570054878 source:/home/alumno/Descargas/TomasCostilla/TomasCostilla/TPs_ProgramacionLab1/TrabajoPractico2/main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"ArrayEmployees.h"
+
+1570053277 source:/home/alumno/Descargas/TomasCostilla/TomasCostilla/TPs_ProgramacionLab1/TrabajoPractico2/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
