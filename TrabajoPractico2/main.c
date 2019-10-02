@@ -11,6 +11,7 @@ int main(void)
 {
 	int opcion;
 	int IDcontador = 1;
+	int insert=0;
 
 	Empleado arrayEmpleado[cantidad];
 	initEmployees(arrayEmpleado,cantidad);
@@ -29,20 +30,46 @@ int main(void)
 	        switch(opcion)
 	        {
 	            case 1:
+                    insert = 1;
 	            	addEmployees(arrayEmpleado,cantidad,&IDcontador);
 	                break;
                 case 2:
-	            	removeEmployee(arrayEmpleado,cantidad);
+                    if(insert==1)
+                    {
+                      removeEmployee(arrayEmpleado,cantidad);
+                    }
+                    else{
+                        msgError();
+                        }
 	                break;
                 case 3:
-	            	updateEmployee(arrayEmpleado,cantidad);
+                     if(insert==1)
+                    {
+                      updateEmployee(arrayEmpleado,cantidad);
+                    }
+                   else{
+                        msgError();
+                        }
 	                break;
                 case 4:
-	            	sortEmployees(arrayEmpleado,cantidad);
+                    if(insert==1)
+                    {
+                      sortEmployees(arrayEmpleado,cantidad);
+                    }
+                    else{
+                        msgError();
+                        }
 	                break;
 
                 case 5:
-                    printEmployees(arrayEmpleado,cantidad);
+                     if(insert==1)
+                    {
+                      printEmployees(arrayEmpleado,cantidad);
+                    }
+                     else
+                     {
+                        msgError();
+                      }
 	                break;
 	            case 6:
 	                printf("\nFin del Programa");

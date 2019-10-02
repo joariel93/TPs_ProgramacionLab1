@@ -18,12 +18,11 @@ utn_getAlfanumerico
 utn_getFecha
 */
 
-/*************************
-*
-*
-*param max Tamaño= elementos+1(\0)
-*
-***************************/
+int msgError(void)
+{
+    printf("\n\nERROR - Primero se debe dar de alta un Empleado(Opcion 1)");
+    return 0;
+}
 
 int getString(char* msg, char* msgError, int min, int max, int* reintentos, char* resultado)
 {

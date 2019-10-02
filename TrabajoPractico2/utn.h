@@ -1,3 +1,5 @@
+int msgError(void);
+
 
 int getInt(	int *pResultado,
 			char *pMensaje,
