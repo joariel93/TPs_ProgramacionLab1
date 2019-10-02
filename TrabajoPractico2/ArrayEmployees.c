@@ -246,7 +246,7 @@ int printEmployees(Empleado array[], int size)
     int contar = 0;
     float sumaProm = 0;
     float total;
-    printf("\nID   Nombre     Apellido     Salario     Sector");
+    printf("\nID     Nombre       Apellido       Salario       Sector");
     if(array!=NULL && size>0)
     {
         for(i=0;i<size;i++)
@@ -257,7 +257,7 @@ int printEmployees(Empleado array[], int size)
             }
             else //if(array[j].salary>total)
             {
-                printf("\n %d    %s     %s      %f      %d",array[i].id,array[i].name,array[i].lastName,array[i].salary,array[i].sector);
+                printf("\n %d       %s        %s           %f         %d",array[i].id,array[i].name,array[i].lastName,array[i].salary,array[i].sector);
                 sumaProm += array[i].salary;
             }
 
