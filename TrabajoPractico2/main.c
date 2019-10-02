@@ -10,19 +10,19 @@
 int main(void)
 {
 	int opcion;
-	int IDcontador = 0;
+	int IDcontador = 1;
 
 	Empleado arrayEmpleado[cantidad];
 	initEmployees(arrayEmpleado,cantidad);
 	printf("ABM DE EMPLEADOS");
 	do
 	    {
-	        printf("\n\n1- ALTA: ");
-            printf("\n2- BAJA: ");
-            printf("\n3- MODIFICA: ");
-            printf("\n4- ORDENAR: ");
-            printf("\n5- LISTAR: ");
-            printf("\n6- SALIR: ");
+	        printf("\n\n1- ALTA ");
+            printf("\n2- BAJA ");
+            printf("\n3- MODIFICA ");
+            printf("\n4- ORDENAR ");
+            printf("\n5- LISTAR ");
+            printf("\n6- SALIR ");
 	        printf("\nIngrese una opcion: ");
             scanf("%d",&opcion);
 	        switch(opcion)

@@ -5,19 +5,6 @@
 #include "ArrayEmployees.h"
 
 
-/*int verificaVacio(Empleado array[],int size)
-{
-    int retorno = -1;
-    if(array != NULL)
-    {
-        retorno = 0;
-    }
-    else{
-        printf("\nSe debe Realizar el alta de Empleados antes que realizar otra operacion!");
-    }
-    return retorno;
-}*/
-
 
 
 
@@ -48,7 +35,7 @@ int initEmployees(Empleado array[], int size)
 }
 
 /** \brief Busca el primer lugar vacio en un array
-* \param array empleado Array de la estructura empleado
+* \param array empleado
 * \param  int size del array
 * \param posicion int* Puntero a la posicion del array donde se encuentra el valor buscado
 * \return  Return (-1) si no encuentra un lugar vacio o Error  si encuentra una posicion vacia
@@ -101,37 +88,10 @@ int findEmployeeById(Empleado array[], int size, int valorBuscado, int* posicion
     return retorno;
 }
 
-/** \brief Busca un int en un array y devuelve la posicion en que se encuentra
-* \param array fantasma Array de fantasma
-* \param size int size del array
-* \param posicion int* Puntero a la posicion del array donde se encuentra el valor buscado
-* \return int Return (-1) si no encuentra el valor buscado o Error [Invalid length or NULL pointer] - (0) si encuentra el valor buscado
-*
-*/
-int buscaInt(Empleado array[], int size, int valorBuscado, int* posicion)
-{
-    int retorno=-1;
-    int i;
-    if(array!= NULL && size>=0)
-    {
-        for(i=0;i<size;i++)
-        {
-            if(array[i].isEmpty==1)
-                continue;
-            else if(array[i].sector==valorBuscado)
-            {
-                retorno=0;
-                *posicion=i;
-                break;
-            }
-        }
-    }
-    return retorno;
-}
 
 
 /** \brief Solicita los datos para completar la primer posicion vacia de un array
-* \param array fantasma Array de fantasma
+* \param array Empleado
 * \param size int size del array
 * \param contadorID int* Puntero al ID unico que se va a asignar al nuevo elemento
 * \return int Return (-1) si Error [largo no valido o NULL pointer o no hay posiciones vacias] - (0) si se agrega un nuevo elemento exitosamente
@@ -173,8 +133,8 @@ int addEmployees(Empleado array[], int size, int* contadorID)
 }
 
 /** \brief Borra un elemento del array por ID
-* \param array fantasma Array de fantasma
-* \param size int Tamaño del array
+* \param array Empleado
+* \param   Tamaño del array
 * \return int Return (-1) si Error [largo no valido o NULL pointer o no encuentra elementos con el valor buscado] - (0) si se elimina el elemento exitosamente
 *
 */
@@ -217,7 +177,7 @@ int removeEmployee(Empleado array[], int size)
 
 //Modificar
 /** \brief Busca un elemento por ID y modifica sus campos
-* \param array fantasma Array de fantasma
+* \param array Empleados
 * \param size int Tamaño del array
 * \return int Return (-1) si Error [largo no valido o NULL pointer o no encuentra elementos con el valor buscado] - (0) si se modifica el elemento exitosamente
 *
@@ -230,7 +190,7 @@ int updateEmployee(Empleado array[], int size)
     int opcion;
     if(array!=NULL && size>0)
     {
-        //utn_getUnsignedInt("\nID a modificar: ","\nError",1,sizeof(int),1,size,1,&id);
+
         printf("\nIngrese el ID a modificar: ");
         scanf("%d",&id);
         if(findEmployeeById(array,size,id,&posicion)==-1)
@@ -297,7 +257,11 @@ int printEmployees(Empleado array[], int size)
 
         for(j=0;j<size;j++)
         {
-            if(array[j].salary>total)
+            if(array[j].isEmpty == 1)
+            {
+                continue;
+            }
+            else if(array[j].salary>total)
             {
                 contar = contar + 1;
             }
@@ -341,6 +305,7 @@ int sortEmployees(Empleado array[],int size)
 		{	//Por apellido
 			if(strcmp(array[i].lastName,array[i+1].lastName)>0)
 			{
+
 				auxint = array[i].id;
 				array[i].id = array[i+1].id;
 				array[i+1].id = auxint;

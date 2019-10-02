@@ -31,18 +31,18 @@
 	<string.h>
 	"utn.h"
 
-1569973849 source:c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\arrayemployees.c
+1569976112 source:c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\arrayemployees.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 	"utn.h"
 	"ArrayEmployees.h"
 
-1569973848 c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\utn.h
+1569976238 c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\utn.h
 
 1569973379 c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\arrayemployees.h
 
-1569973400 source:c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\main.c
+1569976118 source:c:\users\usuario\desktop\cc\tps_programacionlab1\trabajopractico2\main.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
