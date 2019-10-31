@@ -37,6 +37,8 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 		printf("El archivo no puede ser abierto");
 		retorno=-1;
 	}
+
+	//UNA VEZ LEIDO LLAMAR A LA FUNCION NEW_EMPLOYEE PARA QUE GUARDE UNA POSICION EN LA STRUCT DE EMPLOYEE
 	while(!feof(pArchivo))
 	    {
 		//\n
