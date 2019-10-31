@@ -29,6 +29,7 @@ Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajad
 	    emp->sueldo=atoi(sueldo);
 
 	}
+
 	return emp;
 }
 

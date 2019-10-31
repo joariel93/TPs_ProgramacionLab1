@@ -5,7 +5,7 @@
 
 #include "LinkedList.h"
 #include "Employee.h"
-
+#include "parser.h"
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
  *
@@ -20,33 +20,15 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 	FILE *pArchivo;
 	int retorno=0;
 	int cantidadLeida,longitudTexto;
-	char texto[50];
-	char bufId[20];
-	char bufNombre[20];
-	char bufHorasTrabajadas[20];
-	char bufSueldo[20];
-	int i;
-
-	int id;
-	char nom[20];
-	int horas;
-	int sueldo;
 
 	if((pArchivo=fopen(path,"r+"))==NULL)
 	{
 		printf("El archivo no puede ser abierto");
 		retorno=-1;
 	}
-
+	parser_EmployeeFromText(pArchivo,pArrayListEmployee);
 	//UNA VEZ LEIDO LLAMAR A LA FUNCION NEW_EMPLOYEE PARA QUE GUARDE UNA POSICION EN LA STRUCT DE EMPLOYEE
-	while(!feof(pArchivo))
-	    {
-		//\n
-		//%[^,],%[^,],%[^,],%[^,]
-	     fscanf(pArchivo,"%[^,],%[^,],%[^,],%[^\n]\n",bufId,bufNombre,bufHorasTrabajadas,bufSueldo);
-	   // fprintf(pArchivo,"%[^,]",texto);}
-	    printf("%s %s %s %s \n",bufId,bufNombre,bufHorasTrabajadas,bufSueldo);
-	    }
+
 
     return retorno;
 }

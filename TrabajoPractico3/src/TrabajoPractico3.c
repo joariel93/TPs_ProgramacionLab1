@@ -45,7 +45,7 @@ int main()
 {
     int option = 0;
 
-    LinkedList* listaEmpleados; //= ll_newLinkedList();
+    LinkedList* listaEmpleados = ll_newLinkedList();
     //Employee** lista = (Employee**) malloc(sizeof(Employee*));
     //Employee** pAuxEmpleado;
     int cont = 0;
