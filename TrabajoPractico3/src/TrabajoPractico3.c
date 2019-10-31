@@ -19,7 +19,7 @@
 *****************************************************/
 
 
-
+/*
 int f1(int *a, int b,int (*foo)(int,int)) {
 	*a = *a * 2;
 	*a = foo(*a,b);
@@ -38,21 +38,36 @@ int main()
 	printf("%d %d %d",course,lets,find);
 	return 0;
 }
+*/
 
 
-/*
 int main()
 {
     int option = 0;
 
-    LinkedList* listaEmpleados = ll_newLinkedList();
+    LinkedList* listaEmpleados; //= ll_newLinkedList();
+    //Employee** lista = (Employee**) malloc(sizeof(Employee*));
+    //Employee** pAuxEmpleado;
+    int cont = 0;
+    char resp='s';
+
+
+    controller_loadFromText("data.csv",listaEmpleados);
+
+/*   char bufId;
+    char bufNombre[128];
+    char bufHorasTrabajadas;
+    char bufSueldo;
+
     do{
         switch(option)
         {
-            case 1:
-                controller_loadFromText("data.csv",listaEmpleados);
-                break;
+            case 1:	if(controller_loadFromText("data.csv",listaEmpleados)==0)
+            		{
+
+            		}
+            		break;
         }
-    }while(option != 10);
+    }while(option != 10);*/
     return 0;
-}*/
+}
