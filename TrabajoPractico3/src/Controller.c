@@ -48,10 +48,7 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
 	int retorno=0;
 	int cantidadLeida,longitudTexto;
 	char texto[50];
-	char bufId;
-	char bufNombre[128];
-	char bufHorasTrabajadas;
-	char bufSueldo;
+
 
 	if((pArchivo=fopen(path,"r+"))==NULL)
 	{
@@ -62,7 +59,6 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
 	    {
 	    cantidadLeida = fread(texto ,sizeof (char), longitudTexto , pArchivo );
 	    printf("El texto leido es: %s", texto) ;
-	    fprintf(pArchivo,"%[^,]",texto);
 	    }
 
     return retorno;
@@ -77,6 +73,7 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
+
     return 1;
 }
 

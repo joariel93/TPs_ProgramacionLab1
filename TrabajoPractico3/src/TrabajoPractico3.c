@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdio_ext.h>
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Controller.h"
@@ -43,31 +44,42 @@ int main()
 
 int main()
 {
-    int option = 0;
-
-    LinkedList* listaEmpleados = ll_newLinkedList();
+int option = 0;
+LinkedList* listaEmpleados = ll_newLinkedList();
     //Employee** lista = (Employee**) malloc(sizeof(Employee*));
     //Employee** pAuxEmpleado;
-    int cont = 0;
-    char resp='s';
+int cont = 0;
+char resp='s';
+char bufId;
+char bufNombre[128];
+char bufHorasTrabajadas;
+char bufSueldo;
+
+controller_loadFromText("data.csv",listaEmpleados);
 
 
-    controller_loadFromText("data.csv",listaEmpleados);
+do{
+	utn_menu();
+	__fpurge(stdin);
+	scanf("%d",option);
+	switch(option)
+    {
+    	case 1:	if(controller_loadFromText("data.csv",listaEmpleados)==0)
+        		{
 
-/*   char bufId;
-    char bufNombre[128];
-    char bufHorasTrabajadas;
-    char bufSueldo;
-
-    do{
-        switch(option)
-        {
-            case 1:	if(controller_loadFromText("data.csv",listaEmpleados)==0)
-            		{
-
-            		}
-            		break;
-        }
-    }while(option != 10);*/
-    return 0;
+           		}
+           		break;
+    	case 2:	if(controller_loadFromBinary("data.csv",listaEmpleados)==0)
+    	        {
+    	        }
+    	        break;
+    	case 3:	if(listaEmpleados!=NULL)
+    	        {
+    				controller_addEmployee(listaEmpleados);
+    				cont++;
+    	        }
+    	        break;
+    }
+}while(option != 10);
+return 0;
 }
